@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Указываем кодировку -->
+        <meta charset="utf-8">
+        <!-- Текст во вкладке -->
+        <title>Алгоритмы рюкзака</title>
+        <!-- Иконка во вкладке-->
+        <link rel="shortcut icon" href="images/icon.png" type="image/png" />
+        <!-- Подключаем css -->
+        <link rel="stylesheet" href="style/main.css" type="text/css" media="all" />
+    </head>
+    <body onload="LoadDefaultItems()">
+        <h3>Добавление нового элемента</h3>
+        <p>
+            <table>
+                <tr>
+                    <td class="td1">Название</td>
+                    <td class="td1"><input id="enteredName" type="text" value="Элемент"></td>
+                </tr>
+                <tr>
+                    <td class="td1">Вес</td>
+                    <td class="td1"><input id="enteredWeight" type="number" value="5"></td>
+                </tr>
+                <tr>
+                    <td class="td1">Стоимость</td>
+                    <td class="td1"><input id="enteredCost" type="number" value="7"></td>
+                </tr>
+            </table>
+        </p>
+
+        <input type="button" class="btn1" value="Добавить" onclick="AddItem()">
+        <input type="button" class="btn1" value="Удалить" onclick="DeleteItem()">
+        <p>
+            <form action="pages/factory.html" target="_blank">
+                <button class="btn1">Тестирование больших значений</button>
+            </form>
+        </p>
+
+
+
+        <h3>Текущие элементы</h3>
+        <div id="items_div" class="itemsdiv">
+            <table id="items_table" border = 1>
+                <tr id="itsdh">
+                    <td class="td2">Название</td>
+                    <td class="td2">Вес</td>
+                    <td class="td2">Стоимость</td>
+                </tr>
+            <!--<tr id="itsr0">
+                    <td class="td2"><input name="itemSelect" type="radio" value="0" onchange="SelectItem(this)">Золото</td>
+                    <td class="td2">4</td>
+                    <td class="td2">10</td>
+                </tr> 
+                <tr id="itsr1">
+                    <td class="td2"><input name="itemSelect" type="radio" value="1" onchange="SelectItem(this)">Медь</td>
+                    <td class="td2">1</td>
+                    <td class="td2">5</td>
+                </tr> -->
+            </table>
+        </div>
+
+        <p class="p1"><b>Размер рюкзака:</b><input id="bagsize" type="number" value="80"></p>
+
+        <input type="button" class="btn1" value="Рассчитать" onclick="CalculationAlgorithms()">
+        
+        <h3>Результаты</h3>
+        <textarea class="txtar1" id="textarea1"></textarea>
+
+        <!-- Подключаем JS скрипты -->
+        <script src="scripts/main.js"></script>
+    </body>
+</html>

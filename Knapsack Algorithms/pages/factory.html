@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <!-- Иконка во вкладке-->
+        <link rel="shortcut icon" href="../images/icon.png" type="image/png" />
+        <link rel="stylesheet" href="../style/main.css" type="text/css" media="all" />
+        <title>Тестирование больших значений</title>
+    </head>
+    <body>
+        <h3>Тестирование алгоритмов на больших объемах N</h3>
+        <p>
+            <table>
+                <tr>
+                    <td class="td1">Количество элементов</td>
+                    <td class="td1"><input type="number" id="enteredItemLength" value="300"></td>
+                </tr>
+                <tr>
+                    <td class="td1">Вес рюкзака</td>
+                    <td class="td1"><input type="number" id="enteredKnapsackSize" value="200"></td>
+                </tr>
+            </table>
+        </p>
+        <h3>Выбранный алгоритм</h3>
+        <p>
+            <table>
+                <tr>
+                    <td><input type="radio" name="selectedAlgorithm" id="greedy" checked>Жадный алгоритм неограниченного рюкзака</td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="selectedAlgorithm" id="dynamic">Динамическое программирование для неограниченного рюкзака</td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="selectedAlgorithm" id="brutalForce"> Полный перебор рюкзака 0 - 1</td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="selectedAlgorithm" id="greedyZeroOne"> Жадный алгоритм рюкзака 0 - 1</td>
+                </tr>
+            </table>
+        </p>
+        <p>
+            <input type="button" class="btn1" value="Рассчитать" onclick="FactoryTests()">
+        </p>
+        <p>
+            <h3>Результаты</h3>
+            <textarea class="txtar1" id="textarea2"></textarea>
+        </p>
+        <script src="../scripts/main.js"></script>
+    </body>
+</html>
